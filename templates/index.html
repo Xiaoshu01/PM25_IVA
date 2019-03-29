@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Visualization of PM2.5 of the Five Chiniese Cities</title>
+    <script src="/static/js/echarts.js"></script>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+<div id="main"></div>
+
+<script type="text/javascript">
+    //$ajax前后台交互
+    //$echats代码
+    $.ajax({
+        type: 'GET',
+        url: '/data',
+        data:data,
+        dataType:'',
+        success: function (data) {
+        # 这里的data就是json格式的数据
+            document.write(data)
+
+    },
+    error: function (xhr, type) {
+
+    }
+
+    })
+    ;
+</script>
+
+</body>
+</html>
