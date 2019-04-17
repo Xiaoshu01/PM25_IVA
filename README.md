@@ -10,11 +10,9 @@ https://www.kaggle.com/uciml/pm25-data-for-five-chinese-cities/data
 
 ### 属性：
 
-No	
+No	year	month	day	hour	season	PM_Dongsi	PM_Dongsihuan	PM_Nongzhanguan	PM_US Post DEWP	HUMI	PRES	TEMP	cbwd	Iws	precipitation	Iprec
 
-year	month	day	hour	season	
+### 运行：
 
-PM_Dongsi	PM_Dongsihuan	PM_Nongzhanguan	PM_US Post
-
-DEWP	HUMI	PRES	TEMP	cbwd	Iws	precipitation	Iprec
+python app.py
 
