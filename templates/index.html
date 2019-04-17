@@ -20,7 +20,7 @@
 
         #container {
             position: relative;
-            margin: 20px;
+            margin: 10px;
             height: 500px;
         }
 
@@ -34,10 +34,10 @@
         }
 
         #content {
-            margin: 0px 650px 0px 110px;
+            margin: 0px 550px 0px 110px;
             /* border:solid 0.5px #ccc;*/
             height: 100%;
-            width: 850px;
+            width: 900px;
 
 
         }
@@ -45,7 +45,7 @@
         #right_side {
             position: absolute;
             top: 60px;
-            right: 10px;
+            right: 0px;
             /*border:solid 0.5px #ccc;  */
             width: 500px;
             height: 100%;
@@ -160,7 +160,7 @@
 
     myChart1.setOption(option = {
         title: {
-            text: 'Beijing : PM2.5'
+            text: 'Beijing : PM2.5(ug/m^3)'
         },
         tooltip: {
             trigger: 'axis'
@@ -222,7 +222,7 @@
             }
         },
         series: {
-            name: city_name + ': PM2.5',
+            name: city_name + ': PM2.5(ug/m^3)',
             type: 'line',
             data: data.map(function (item) {
                 return item[1];
@@ -251,7 +251,7 @@
 
     //app.title = '笛卡尔坐标系上的热力图';
 
-    var hours = ['PM2.5', 'DEWP', 'HUMI', 'PRES', 'TEMP', 'Iws'];
+    var hours = ['PM2.5(ug/m^3)', 'DEWP(℃)', 'HUMI(%)', 'PRES(hPa)', 'TEMP(℃)', 'Iws(m/s)'];
     var days = ['PM2.5', 'DEWP', 'HUMI', 'PRES', 'TEMP', 'Iws'];
 
 
@@ -291,6 +291,10 @@
             data: hours,
             splitArea: {
                 show: true
+            },
+            axisLabel: {
+                interval: 0,
+                rotate: 45,
             }
         },
         yAxis: {
@@ -298,6 +302,10 @@
             data: days,
             splitArea: {
                 show: true
+            },
+            axisLabel: {
+                interval: 0,
+                rotate: 45,
             }
         },
         visualMap: {
@@ -307,6 +315,7 @@
             orient: 'horizontal',
             left: 'center',
             bottom: '15%'
+
         },
         series: [{
             name: 'cor index',
@@ -343,7 +352,7 @@
 
                     myChart1.setOption(option = {
                         title: {
-                            text: city_name + ' : PM2.5'
+                            text: city_name + ' : PM2.5(ug/m^3)'
                         },
                         xAxis: {
                             data: data.map(function (item) {
@@ -352,7 +361,7 @@
                         },
 
                         series: {
-                            name: city_name + ': PM2.5',
+                            name: city_name + ': PM2.5(ug/m^3)',
                             data: data.map(function (item) {
                                 return item[1];
                             })

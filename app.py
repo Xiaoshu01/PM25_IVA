@@ -84,6 +84,7 @@ def default_corr():
     df = pd.read_csv("corr.csv")
     data1 = df[df.city == city_name][['PM2.5', 'DEWP', 'HUMI', 'PRES', 'TEMP', 'Iws']]
     data1 = np.fabs(np.array(data1.corr()).round(2))
+    # print(data1)
     data = []
     for i in range(0, len(data1)):
         for j in range(0, len(data1)):
